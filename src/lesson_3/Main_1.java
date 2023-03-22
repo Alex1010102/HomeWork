@@ -1,5 +1,8 @@
 package lesson_3;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class Main_1 {
     public static void main(String[] args) {
         // 1 - Primitive type
@@ -130,15 +133,14 @@ public class Main_1 {
          * */
 
 
-
         switch (mathRate) {
-            case 5 :
+            case 5:
                 System.out.println("Отлично");
                 break;
-            case 4 :
+            case 4:
                 System.out.println("Хорошо ");
                 break;
-            case 3 :
+            case 3:
                 System.out.println("Удовлетворительно ");
                 break;
             case 2:
@@ -147,10 +149,33 @@ public class Main_1 {
             case 1:
                 System.out.println("Отвратительно ");
                 break;
-            default :
+            default:
                 System.out.println("Такой оценки не знаю ");
                 break;
         }
+
+        int weather = 15;
+
+        switch (weather) {
+            case 30:
+                System.out.println("Погода сегодня жарковата ");
+                break;
+            case 15:
+                System.out.println("Погода сегодня теплая ");
+                break;
+            case -10:
+                System.out.println("Погода сегодня теплая ");
+                break;
+            default:
+                System.out.println("Ощущения по погоде неизвестны, прийдется выйти на улицу ");
+                break;
+        }
+
+
+        Scanner scan = new Scanner(System.in);
+        int fromConsole = scan.nextInt();
+
+        System.out.println(fromConsole);
 
     }
 }
