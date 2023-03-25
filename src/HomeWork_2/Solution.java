@@ -155,7 +155,6 @@ public class Solution {
             } else if (y <= time && time < r )
                 System.out.println("Красный ");
 
-
         }
 
     }
