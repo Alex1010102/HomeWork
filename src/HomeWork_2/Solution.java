@@ -60,7 +60,6 @@ public class Solution {
                 break;
         }
 
-
         /** Задача 4. Написать программу, которая будет проверять число, которое мы подадим ей.
          * Если число положительное, то увеличить его в два раза. Если число отрицательное, то прибавить
          * единицу. Если введенное число равно нулю, необходимо вывести ноль. Вывести результат в консоль.
@@ -84,20 +83,26 @@ public class Solution {
          * количество дней в этом году: x, где х - 366 для високосного года, х - 365 для обычного года.
          * */
 
+        /** Scanner sc = new Scanner(System.in);
+         * int year = sc.nextInt();
+         * int days = 366;
+         * int res1 = year % 4;
+         * int res2 = year % 100;
+         * int res3 = year % 400;
+         *  if (res1 == 0) {
+         *  if (res2 == 0 && res3 != 0)
+         *     days = 365;
+         *  } else
+         *     days = 365;
+         *  System.out.println("количество дней в году: " + days);
+         * */
+
         Scanner sc = new Scanner(System.in);
         int year = sc.nextInt();
-        int days = 366;
-
-        int res1 = year % 4;
-        int res2 = year % 100;
-        int res3 = year % 400;
-
-        if (res1 == 0){
-            if (res2 == 0 && res3 != 0)
-                days = 365;
-        }else
-            days = 365;
-        System.out.println("количество дней в году: " + days);
+        if (((year % 400) == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+            System.out.println("количество дней в году: 366");
+        else
+            System.out.println("количество дней в году: 365");
 
         /** Задача 6. Объявить три переменных (a, b, c) - стороны предполагаемого треугольника.
          * Определить возможность существования треугольника по сторонам. Результат вывести на экран в
@@ -144,21 +149,33 @@ public class Solution {
         Scanner sca = new Scanner(System.in);
         float time = sca.nextFloat();
 
-        for (float i = 0; i < 60; i += 5) {
-            float g = i + 3;
-            float y = g + 1;
-            float r = y + 1;
-            if (i <= time && time < g) {
-                System.out.println("Зелёный ");
-            } else if (g <= time && time < y) {
-                System.out.println("Жёлтый ");
-            } else if (y <= time && time < r )
-                System.out.println("Красный ");
+        /** for (float i = 0; i < 60; i += 5) {
+         * float g = i + 3;
+         * float y = g + 1;
+         * float r = y + 1;
+         * if (i <= time && time < g) {
+         *      System.out.println("Зелёный ");
+         * } else if (g <= time && time < y) {
+         *      System.out.println("Жёлтый ");
+         * } else if (y <= time && time < r )
+         *      System.out.println("Красный ");
+         * */
+
+        float x = time % 5;
+        if (x < 3)
+            System.out.println("зелёный");
+        if (3 <= x && x < 4)
+            System.out.println("жёлтый");
+        if (4 <= x && x < 5)
+            System.out.println("красный");
+
 
         }
 
     }
-}
+
+
+
 
 
 
