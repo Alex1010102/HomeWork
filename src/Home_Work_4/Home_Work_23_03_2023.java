@@ -1,3 +1,5 @@
+package Home_Work_4;
+
 import java.util.Scanner;
 
 public class Home_Work_23_03_2023 {
@@ -82,6 +84,7 @@ public class Home_Work_23_03_2023 {
         System.out.printf("Меня зовут %s", name);
         System.out.println();
         System.out.println("Я родился " + Day + "." + Month + "." + Year + "");
+
     }
 
 }
