@@ -5,10 +5,7 @@ import java.util.Scanner;
 public class Arrays {
     public static void main(String[] args) {
 
-        /** Задача 1. Создать массив на 10 строк. Ввести с клавиатуры 8 строк и сохранить их в массив.
-         * Вывести содержимое всего массива (10 элементов) на экран в обратном порядке.
-         * Каждый элемент - с новой строки.
-         * */
+        // Задача 1.
 
         Scanner sc = new Scanner(System.in);
         String [] list = new String [10];
@@ -21,9 +18,8 @@ public class Arrays {
             System.out.println(list[i]);
         }
 
-        /** Задача 2. Создай массив на 10 чисел. Считай с консоли 10 чисел и заполни ими массив
-         * Найти максимальное число из элементов массива.
-         * */
+        // Задача 2.
+
         Scanner number = new Scanner(System.in);
         int[] array = new int[10];
         System.out.println("Введите 10 чисел: ");
@@ -39,11 +35,8 @@ public class Arrays {
         }
         System.out.println("Максимальное число из элементов массива: " + max);
 
-        /** Задача 3. Создать массив на 10 строк. Создать массив на 10 чисел.
-         * Ввести с клавиатуры 10 строк, заполнить ими массив строк. В каждую ячейку массива чисел
-         * записать длину строки из массива строк, индекс/номер ячейки которой совпадает с текущим
-         * индексом из массива чисел.
-         * */
+        // Задача 3.
+
         Scanner numbers = new Scanner(System.in);
         int[] numbe = new int[10];
         String[] str = new String[10];
@@ -60,11 +53,8 @@ public class Arrays {
             System.out.println(j);
         }
 
+        // Задача 4.
 
-
-        /** Задача 4.Создать массив на 10 чисел. Ввести с клавиатуры 10 чисел и записать их в массив.
-         * Вывести на экран элементы массива в обратном порядке, каждое значение выводить с новой строки.
-         * * */
         Scanner numb = new Scanner(System.in);
         int[] arr = new int[10];
         System.out.println("Введите 10 чисел: ");
@@ -81,10 +71,7 @@ public class Arrays {
             System.out.println(arr[i]);
         }
 
-        /** Задача 5. Создать массив на 20 чисел. Ввести в него значения с клавиатуры. Создать два массива на 10 чисел
-         * каждый. Скопировать большой массив в два маленьких: половину чисел в первый маленький, вторую половину
-         * вовторой маленький. Вывести второй маленький массив на экран, каждое значение выводить с новой строки.
-         * */
+        // Задача 5.
 
         Scanner scanner = new Scanner(System.in);
         int [] array1 = new int[20];
@@ -104,57 +91,49 @@ public class Arrays {
             System.out.println(array3[i]);
         }
 
-        /** Задача 6. Создать массив на 20 чисел. Заполнить его числами с клавиатуры.
-         * Найти максимальное и минимальное числа в массиве.Вывести на экран максимальное и минимальное
-         * числа через пробел.
-         * */
+        // Задача 6.
 
         Scanner array5 = new Scanner(System.in);
-        int [] list1 = new int[20];
-        System.out.println ("Введите 20 чисел: ");
+        int[] list10 = new int[20];
+        System.out.println("Введите 20 чисел: ");
 
-        for (int i = 0; i < list.length; i++) {
-            list1[i] = array5.nextInt();}
-                int max1 = list1 [0];
-        for (int i = 0; i < list.length; i++) {
-            if (max1 < list1[i])
-                max1 = list1[i];
+        for (int i = 0; i < list10.length; i++) {
+            list10[i] = array5.nextInt();
+        }
+        int max1 = list10[0];
+        for (int j : list10) {
+            if (max1 < j)
+                max1 = j;
         }
         int min1 = max1;
-
-        for (int i = 0; i < list.length; i++){
-            if (min1 > list1[i])
-                min1 = list1[i];
+        for (int j : list10) {
+            if (min1 > j)
+                min1 = j;
         }
         System.out.println("Максимальное и минимальное числа:");
-        System.out.print(max1 +  " "   + min1);
+        System.out.print(max1 + " " + min1);
 
 
-        /** Задача 7. Написать программу, которая вводит с клавиатуры 20 чисел и выводит их в убывающем порядке.
-         * */
+        // Задача 7.
         Scanner number1 = new Scanner(System.in);
         int[] arraysorting = new int[20];
         System.out.println("Введите 20 чисел: ");
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < arraysorting.length; i++) {
             arraysorting[i] = number1.nextInt();
         }
-        sorting (arraysorting);
-        for (int x : arraysorting) {
-            System.out.println(x);
-        }
-    }
-        public static void sorting (int  [] array) {
-            int numbers;
-            System.out.println("Вывод чисел в убывающем порядке:");
-            for (int i = 0; i < array.length; i++) {
-                for (int j = 0; j < array.length; j++) {
-                    if (array[i] > array[j]) {
-                        numbers = array[j];
-                        array[j] = array[i];
-                        array[i] = numbers;
-
-                    }
+        int sort;
+        System.out.println("Вывод чисел в убывающем порядке:");
+        for (int i = 0; i < arraysorting.length - 1; i++) {
+            for (int w = 1; w < arraysorting.length - i; w++) {
+                if (arraysorting[w - 1] > arraysorting[w]) {
+                    sort = arraysorting[w];
+                    arraysorting[w] = arraysorting[w - 1];
+                    arraysorting[w - 1] = sort;
                 }
             }
         }
+        for (int i = arraysorting.length - 1; i >= 0; i--) {
+            System.out.println(arraysorting[i] + " ");
+        }
+    }
 }
