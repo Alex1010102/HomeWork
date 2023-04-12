@@ -1,10 +1,12 @@
 package Home_Work_6_30_03;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         // Задача 1.
 
         Scanner scanner10 = new Scanner(System.in);
@@ -28,7 +30,6 @@ public class Main {
         }
 
         // Задача 2.
-
         Scanner in = new Scanner(System.in);
         System.out.println("Введите 5 строк: ");
         String[] line1 = new String[5];
@@ -43,25 +44,21 @@ public class Main {
             }
             line = in.nextLine();
         }
-        if (minLine.equals(maxLine)) {
-            System.out.println("Введена одна строка или строки одинаковы " + minLine);
-        } else {
-
-            System.out.println("Строка с максимальной длиной \"" + maxLine + "\" - длина: " + maxLine.length());
-            System.out.println("Строка с минимальной длиной \"" + minLine + "\" - длина: " + minLine.length());
-        }
+        System.out.println("Строка с максимальной длиной \"" + maxLine + "\" - длина: " + maxLine.length());
+        System.out.println("Строка с минимальной длиной \"" + minLine + "\" - длина: " + minLine.length());
+    }
 
         // Задача 3.
 
         Scanner scan = new Scanner(System.in);
         String[] line5 = new String[10];
         System.out.println("Введите 8 строк: ");
-        for (int i = 0; i < 8; i++) {
-            line5[i] = scan.nextLine();
+        for (int h = 0; h < 8; h++) {
+            line5[h] = scan.nextLine();
         }
         System.out.println("Содержимое массива в обратном порядке: ");
-        for (int i = line5.length - 1; i >= 0; i--) {
-            System.out.println(line5[i]);
+        for (int h = line5.length - 1; h >= 0; h--) {
+            System.out.println(line5[h]);
         }
 
         // Задача 4.
@@ -86,15 +83,14 @@ public class Main {
         String[] strings = new String[6];
         System.out.println("Введите 6 строк: ");
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < strings.length; i++) {
-            strings[i] = scanner.nextLine();
+        for (int v = 0; v < strings.length; v++) {
+            strings[v] = scanner.nextLine();
         }
-        for (int i = 0; i < strings.length; i++) {
-            for (int j = 0; j < strings.length; j++) {
-                if (i != j && strings[i] != null) {
-                    if (strings[i].equals(strings[j])) {
-                        strings[j] = null;
-                        strings[i] = null;
+        for (int v = 0; v < strings.length; v++) {
+            for (int l = 0; l < strings.length; l++) {
+                if (v != l && strings[v] != null) {
+                    if (strings[v].equals(strings[l])) {
+                        strings[v] = null;
                     }
                 }
             }
@@ -104,7 +100,11 @@ public class Main {
             System.out.println(string);
         }
     }
-}
+
+
+
+
+
 
 
 
