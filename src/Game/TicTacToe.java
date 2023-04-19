@@ -28,6 +28,7 @@ public class TicTacToe {
             }
             if (isTableFull()) {
                 System.out.println("DRAW");
+                break;
             }
             turnAI();
             printTable();
@@ -55,7 +56,6 @@ public class TicTacToe {
     }
     public void turnHuman() {
         int x, y;
-
         do {
         System.out.println("Enter x and y from [0...4]");
         x = scanner.nextInt();
@@ -142,7 +142,6 @@ public class TicTacToe {
             }
         }
         return true;
-
     }
     public void turnAI() {
         int x, y;
